@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e2e2e2, #eddffc);
+}
+
+.btn-back {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    display: flex;
+    align-items: center; 
+    color: black; 
+    text-decoration: none; 
+    transition: transform 0.3s;
+}
+
+.btn-back i {
+    font-size: 24px; 
+    margin-right: 8px; 
+    font-weight: bold; 
+}
+
+.btn-back a {
+    font-size: 18px; 
+    color: black;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.btn-back:hover {
+    transform: scale(1.1); 
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: auto;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+    width: 100%; /* Allow it to take full width */
+}
+
+.info-box {
+    margin: 15px 0;
+    width: 100%; /* Allow it to take full width */
+}
+
+.info-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.info-box input {
+    width: 100%;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    width: 100%; /* Allow it to take full width */
+}
+
+.btn {
+    width: 150px; /* Set a fixed width for buttons */
+    height: 48px;
+    background: #914ed5; /* cor de botão principal */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s;
+    margin: 0px 10px; /* Add some space between buttons */
+    margin-top: 18px;
+    margin-bottom: -18px;
+}
+
+.btn:hover {
+    background: #7a3bbd; /* cor de botão ao passar o mouse */
+}
+
+.cancel-btn {
+    background: #d9534f; /* Cor de fundo vermelha */
+    width: 150px; /* Manter a mesma largura que o botão "Salvar" */
+    height: 48px; /* Manter a mesma altura que o botão "Salvar" */
+    border-radius: 8px; /* Manter o mesmo estilo de borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Manter a mesma sombra */
+    border: none; /* Remover borda */
+    cursor: pointer; /* Mudar o cursor para pointer */
+    font-size: 16px; /* Manter o mesmo tamanho de fonte */
+    color: #fff; /* Cor do texto */
+    font-weight: 600; /* Peso da fonte */
+    transition: background 0.3s; /* Transição suave para a cor de fundo */
+    margin: 0px 10px; /* Espaçamento entre os botões */
+    margin-top: 18px;
+}
+
+.cancel-btn:hover {
+    background: #c9302c; /* Cor de fundo ao passar o mouse */
+}
+
+.delete-btn {
+    background: #d9534f; /* cor de botão de excluir */
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background: #c9302c; /* cor de botão de excluir ao passar o mouse */
+}
+
+#salvar{
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro e semi-transparente */
+    z-index: 1; /* Colocar atrás do alerta */
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    visibility: hidden; /* Esconder inicialmente */
+    opacity: 0; /* Esconder inicialmente */
+    transition: visibility 0s, opacity 0.5s; /* Transição suave */
+}
+
+#overlay.active {
+    visibility: visible; /* Tornar visível quando ativo */
+    opacity: 1; /* Tornar opaco quando ativo */
+}
+
+.alert {
+    position: absolute;
+    top: 50%; /* Centralizar verticalmente no container */
+    left: 50%; /* Centralizar horizontalmente no container */
+    transform: translate(-50%, -50%); /* Ajustar o alinhamento */
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2; /* Colocar acima do overlay */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centralizar texto */
+    max-width: 400px; /* Largura máxima do alerta */
+    width: 90%; /* Largura responsiva */
+}
+
+.alert h2 {
+    margin: 0 0 10px;
+}
+
+.alert p {
+    margin: 10px 0; /* Margem para o parágrafo */
+}
+
+.alert a {
+    display: inline-block; /* Para que o link se comporte como um botão */
+    margin: 7px;
+    padding: 7px 10px;
+    border: none;
+    background-color: #914ed5;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.alert a:hover {
+    transition: 0.5s;
+    background-color: #7a3bbd;
+    color: white;
+}
+
+.hidden {
+    display: none; /* Ocultar elementos */
+}

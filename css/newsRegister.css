@@ -1,0 +1,159 @@
+/* newsRegister.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #6200ea;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-back i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.btn-back a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.form-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 400px;
+}
+
+.subContainter {
+    margin-bottom: 20px;
+}
+
+.news-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.news-card a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6200ea;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.news-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #888;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #4b00c4;
+}
+
+.toggle-box {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-panel {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-panel h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.toggle-panel p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.image-preview img {
+    display: block;
+    margin: 10px 0;
+    border-radius: 10px;
+    max-width: 100%;
+}

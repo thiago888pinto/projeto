@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(160deg, #e2e2e2, #eddffc);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    height: 100px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #914ed5; 
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Centralização da div principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ocupa toda a tela menos a altura da navbar */
+    padding-top: 20px;
+}
+
+/* Div interna com o conteúdo */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%; /* Largura da div principal */
+    max-width: 1200px; /* Largura máxima para garantir responsividade */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o campo de CPF */
+.cpf-container {
+    width: 30%; /* O campo de CPF ocupa 1/3 da largura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cpf-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para a seção de serviços */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ocupa toda a largura disponível */
+    background-color: #e6e5e5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    max-height: 600px; /* Altura máxima */
+    max-width: 740px;
+    margin: 0; /* Remove margens extras */
+    padding: 20px; /* Ajuste do preenchimento */
+    overflow-y: auto; /* Permite rolagem */
+}
+
+
+.services-container p {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pet-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    padding: 15px;
+    text-align: left;
+    width: 90%; /* Largura total do container pai */
+    margin-bottom: 20px;
+  }
+
+  .pet-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+    font-weight: normal;
+  }
+  
+  .pet-card a{
+    position: relative;
+    font-size: 20px;
+    color: #914ed5 !important; /* Cor principal */
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out; /* Suaviza a transição */
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .pet-card #excluir{
+    cursor: pointer;
+    font-size: 15px;
+    color: #e73c3c !important;
+  }
+
+  .pet-card #excluir::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+    background: #e73c3c;
+  }
+
+  .pet-card #excluir:hover::before {
+    width: 100%;
+  }
+
+/* Botão de buscar */
+.btn-buscar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #914ed5;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-excluir {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ca2e2e;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn-buscar:hover {
+    background-color: #7934bd;
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    background-color: #910b0b;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column; /* Alinha os elementos em coluna em telas pequenas */
+        width: 95%;
+        padding: 10px;
+    }
+
+    .cpf-container,
+    .services-container {
+        width: 100%; /* Ambos os containers ocupam toda a largura em telas menores */
+    }
+
+    .services-container {
+        padding-left: 0;
+    }
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.logo {
+    max-height: 190px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    margin-left: 5px;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-box input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+.input-box i.fa-regular{
+    cursor: pointer;
+}

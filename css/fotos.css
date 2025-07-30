@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: white
+}
+
+.logo {
+    max-height: 110px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    margin-left: 5px;
+}
+
+.petcare {
+    color: #ec12ac;
+    text-shadow: 2px 2px 4px rgba(46, 49, 137, 0.3);
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(46, 49, 137, 0.3);
+    height: 130px;
+    background: linear-gradient(135deg, #2e3189 0%, #ec12ac 50%, #ddd526 100%);
+    color: white;
+    position: relative;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #2e3189 0%, rgba(236, 18, 172, 0.9) 50%, rgba(221, 213, 38, 0.9) 100%);
+    z-index: 1;
+}
+
+.navbar > * {
+    position: relative;
+    z-index: 2;  
+}
+
+.navbar a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f9fb00, #ec12ac);
+    transition: width 0.3s ease;
+    border-radius: 2px; 
+}
+
+.navbar a:hover {
+    color: #f9fb00;
+    transform: translateY(-2px);
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: linear-gradient(135deg, #2e3189, #ec12ac);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}
+
+.alert {
+    width: 600px;
+    margin: 28px auto -1px auto;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(221, 213, 38, 0.9), rgba(249, 251, 0, 0.9));
+    color: #2e3189;
+    border: 3px solid rgba(236, 18, 172, 0.3);
+    border-radius: 10px;
+}
+
+.container-principal {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.conteudo-centralizado {
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(46, 49, 137, 0.1);
+    border: 2px solid rgba(163, 18, 236, 0.392);
+}
+
+.noticiao {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 28px;
+    color: #2e3189;
+    font-weight: 600;
+}
+
+.bloco-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.categoria-foto {
+    position: relative;
+    width: 380px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(46, 49, 137, 0.2);
+    border: 2px solid rgba(163, 18, 236, 0.392);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.categoria-foto:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(46, 49, 137, 0.3);
+    border: 2px solid rgba(163, 18, 236, 0.392);
+}
+
+.categoria-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.categoria-foto:hover img {
+    transform: scale(1.05);
+}
+
+.categoria-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.footer {
+    color: whitesmoke;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.container{
+    color: black;
+}
